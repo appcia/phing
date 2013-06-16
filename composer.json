@@ -1,0 +1,15 @@
+{
+    "name": "appcia/phing",
+    "description": "Phing extensions",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "appcia",
+            "email": "appcia.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "appcia/webwork": "dev-master",
+        "phing/phing": "dev-master"
+    }
+}
