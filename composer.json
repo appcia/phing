@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "appcia/webwork": ">=0.8",
+        "appcia/webwork": "*",
         "phing/phing": ">=2.4"
     }
 }
