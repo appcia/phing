@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "appcia/webwork": "dev-master",
-        "phing/phing": "dev-master"
+        "appcia/webwork": "*",
+        "phing/phing": ">=2.4"
     }
 }
