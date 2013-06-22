@@ -113,7 +113,7 @@ class PropertyExportTask extends Task
             $parts[$p] = preg_quote($part);
         }
 
-        $regexp = '/' . implode('(.*)', $parts) . '/';
+        $regexp = '/^' . implode('(.*)', $parts) . '$/';
 
         return $regexp;
     }
