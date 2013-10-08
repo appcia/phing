@@ -124,18 +124,18 @@ class PropertyExportTask extends Task
      */
     private function processOptions()
     {
-        $options = explode(',', $this->options);
         $data = array();
+        if (!empty($this->options)) {
+            $options = explode(',', $this->options);
+            foreach ($options as $option) {
+                $parts = explode(':', $option);
+                if (count($parts) !== 2) {
+                    throw new \InvalidArgumentException("Property 'data' has invalid format.");
+                }
 
-        foreach ($options as $option) {
-            $parts = explode(':', $option);
-
-            if (count($parts) !== 2) {
-                throw new \InvalidArgumentException("Property 'data' has invalid format.");
+                list ($key, $value) = $parts;
+                $data[$key] = $value;
             }
-
-            list ($key, $value) = $parts;
-            $data[$key] = $value;
         }
 
         $config = new Config($data);
