@@ -62,7 +62,7 @@ class PropertyExportTask extends Task
         }
 
         try {
-            $writer = Writer::create($this->file);
+            $writer = Writer::objectify($this->file);
 
             $options = $this->processOptions();
             $options->inject($writer);
